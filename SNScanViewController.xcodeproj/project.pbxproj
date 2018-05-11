@@ -1,0 +1,732 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26C79C79DE5A2436132929C3 /* libPods-SNScanViewControllerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2060140BF5E761BA18AC35CB /* libPods-SNScanViewControllerUITests.a */; };
+		989C0C9220A592C30027BC58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C0C9120A592C30027BC58 /* AppDelegate.m */; };
+		989C0C9520A592C30027BC58 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C0C9420A592C30027BC58 /* ViewController.m */; };
+		989C0C9820A592C40027BC58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 989C0C9620A592C40027BC58 /* Main.storyboard */; };
+		989C0C9A20A592C50027BC58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 989C0C9920A592C50027BC58 /* Assets.xcassets */; };
+		989C0C9D20A592C50027BC58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 989C0C9B20A592C50027BC58 /* LaunchScreen.storyboard */; };
+		989C0CA020A592C60027BC58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C0C9F20A592C60027BC58 /* main.m */; };
+		989C0CAA20A592C60027BC58 /* SNScanViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C0CA920A592C60027BC58 /* SNScanViewControllerTests.m */; };
+		989C0CB520A592C60027BC58 /* SNScanViewControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C0CB420A592C60027BC58 /* SNScanViewControllerUITests.m */; };
+		989C0CC720A593A80027BC58 /* SNScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C0CC320A593A80027BC58 /* SNScanViewController.m */; };
+		989C0CC820A593A80027BC58 /* SNScanTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C0CC420A593A80027BC58 /* SNScanTool.m */; };
+		989C0CCA20A594AF0027BC58 /* SNScanViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 989C0CC920A594AF0027BC58 /* SNScanViewController.bundle */; };
+		A1BB2F7E36E854E388BCF94A /* libPods-SNScanViewControllerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77962C0ED413560C14956B21 /* libPods-SNScanViewControllerTests.a */; };
+		B8163264B58A2878214A53D1 /* libPods-SNScanViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C88B350BD8F04A61111E5E1 /* libPods-SNScanViewController.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		989C0CA620A592C60027BC58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 989C0C8520A592C30027BC58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 989C0C8C20A592C30027BC58;
+			remoteInfo = SNScanViewController;
+		};
+		989C0CB120A592C60027BC58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 989C0C8520A592C30027BC58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 989C0C8C20A592C30027BC58;
+			remoteInfo = SNScanViewController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2060140BF5E761BA18AC35CB /* libPods-SNScanViewControllerUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNScanViewControllerUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		35F70654C160D5B943A959A8 /* Pods-SNScanViewControllerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNScanViewControllerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNScanViewControllerUITests/Pods-SNScanViewControllerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3ABB0E55003B8AC9262E0E8A /* Pods-SNScanViewControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNScanViewControllerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNScanViewControllerTests/Pods-SNScanViewControllerTests.release.xcconfig"; sourceTree = "<group>"; };
+		3C88B350BD8F04A61111E5E1 /* libPods-SNScanViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNScanViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ACD0F12FF6261AD0FE3AE82 /* Pods-SNScanViewControllerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNScanViewControllerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNScanViewControllerUITests/Pods-SNScanViewControllerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		77962C0ED413560C14956B21 /* libPods-SNScanViewControllerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNScanViewControllerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		809CD6A078F0FC96B36BFEF5 /* Pods-SNScanViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNScanViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNScanViewController/Pods-SNScanViewController.release.xcconfig"; sourceTree = "<group>"; };
+		989C0C8D20A592C30027BC58 /* SNScanViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNScanViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		989C0C9020A592C30027BC58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		989C0C9120A592C30027BC58 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		989C0C9320A592C30027BC58 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		989C0C9420A592C30027BC58 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		989C0C9720A592C40027BC58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		989C0C9920A592C50027BC58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		989C0C9C20A592C50027BC58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		989C0C9E20A592C60027BC58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		989C0C9F20A592C60027BC58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		989C0CA520A592C60027BC58 /* SNScanViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SNScanViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		989C0CA920A592C60027BC58 /* SNScanViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNScanViewControllerTests.m; sourceTree = "<group>"; };
+		989C0CAB20A592C60027BC58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		989C0CB020A592C60027BC58 /* SNScanViewControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SNScanViewControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		989C0CB420A592C60027BC58 /* SNScanViewControllerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNScanViewControllerUITests.m; sourceTree = "<group>"; };
+		989C0CB620A592C60027BC58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		989C0CC320A593A80027BC58 /* SNScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNScanViewController.m; sourceTree = "<group>"; };
+		989C0CC420A593A80027BC58 /* SNScanTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNScanTool.m; sourceTree = "<group>"; };
+		989C0CC520A593A80027BC58 /* SNScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNScanViewController.h; sourceTree = "<group>"; };
+		989C0CC620A593A80027BC58 /* SNScanTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNScanTool.h; sourceTree = "<group>"; };
+		989C0CC920A594AF0027BC58 /* SNScanViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SNScanViewController.bundle; sourceTree = "<group>"; };
+		989C0CCD20A594EB0027BC58 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		989C0CCE20A594EC0027BC58 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		A3FCBE19BE42CAE0618332AE /* Pods-SNScanViewControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNScanViewControllerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNScanViewControllerTests/Pods-SNScanViewControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DDB8DC5E579FA09F9C5498E8 /* Pods-SNScanViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNScanViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNScanViewController/Pods-SNScanViewController.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		989C0C8A20A592C30027BC58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8163264B58A2878214A53D1 /* libPods-SNScanViewController.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		989C0CA220A592C60027BC58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1BB2F7E36E854E388BCF94A /* libPods-SNScanViewControllerTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		989C0CAD20A592C60027BC58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26C79C79DE5A2436132929C3 /* libPods-SNScanViewControllerUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2AE7C5A98D9A9E5F9ECB771D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C88B350BD8F04A61111E5E1 /* libPods-SNScanViewController.a */,
+				77962C0ED413560C14956B21 /* libPods-SNScanViewControllerTests.a */,
+				2060140BF5E761BA18AC35CB /* libPods-SNScanViewControllerUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43AF82087216D5137B08BFA8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DDB8DC5E579FA09F9C5498E8 /* Pods-SNScanViewController.debug.xcconfig */,
+				809CD6A078F0FC96B36BFEF5 /* Pods-SNScanViewController.release.xcconfig */,
+				A3FCBE19BE42CAE0618332AE /* Pods-SNScanViewControllerTests.debug.xcconfig */,
+				3ABB0E55003B8AC9262E0E8A /* Pods-SNScanViewControllerTests.release.xcconfig */,
+				35F70654C160D5B943A959A8 /* Pods-SNScanViewControllerUITests.debug.xcconfig */,
+				6ACD0F12FF6261AD0FE3AE82 /* Pods-SNScanViewControllerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		989C0C8420A592C30027BC58 = {
+			isa = PBXGroup;
+			children = (
+				989C0C8F20A592C30027BC58 /* SNScanViewController */,
+				989C0CA820A592C60027BC58 /* SNScanViewControllerTests */,
+				989C0CB320A592C60027BC58 /* SNScanViewControllerUITests */,
+				989C0C8E20A592C30027BC58 /* Products */,
+				43AF82087216D5137B08BFA8 /* Pods */,
+				2AE7C5A98D9A9E5F9ECB771D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		989C0C8E20A592C30027BC58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				989C0C8D20A592C30027BC58 /* SNScanViewController.app */,
+				989C0CA520A592C60027BC58 /* SNScanViewControllerTests.xctest */,
+				989C0CB020A592C60027BC58 /* SNScanViewControllerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		989C0C8F20A592C30027BC58 /* SNScanViewController */ = {
+			isa = PBXGroup;
+			children = (
+				989C0C9020A592C30027BC58 /* AppDelegate.h */,
+				989C0C9120A592C30027BC58 /* AppDelegate.m */,
+				989C0C9320A592C30027BC58 /* ViewController.h */,
+				989C0C9420A592C30027BC58 /* ViewController.m */,
+				989C0CC220A593A80027BC58 /* SNScanViewController */,
+				989C0C9620A592C40027BC58 /* Main.storyboard */,
+				989C0C9920A592C50027BC58 /* Assets.xcassets */,
+				989C0C9B20A592C50027BC58 /* LaunchScreen.storyboard */,
+				989C0C9E20A592C60027BC58 /* Info.plist */,
+				989C0C9F20A592C60027BC58 /* main.m */,
+			);
+			path = SNScanViewController;
+			sourceTree = "<group>";
+		};
+		989C0CA820A592C60027BC58 /* SNScanViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				989C0CA920A592C60027BC58 /* SNScanViewControllerTests.m */,
+				989C0CAB20A592C60027BC58 /* Info.plist */,
+			);
+			path = SNScanViewControllerTests;
+			sourceTree = "<group>";
+		};
+		989C0CB320A592C60027BC58 /* SNScanViewControllerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				989C0CB420A592C60027BC58 /* SNScanViewControllerUITests.m */,
+				989C0CB620A592C60027BC58 /* Info.plist */,
+			);
+			path = SNScanViewControllerUITests;
+			sourceTree = "<group>";
+		};
+		989C0CC220A593A80027BC58 /* SNScanViewController */ = {
+			isa = PBXGroup;
+			children = (
+				989C0CC520A593A80027BC58 /* SNScanViewController.h */,
+				989C0CC320A593A80027BC58 /* SNScanViewController.m */,
+				989C0CC620A593A80027BC58 /* SNScanTool.h */,
+				989C0CC420A593A80027BC58 /* SNScanTool.m */,
+				989C0CC920A594AF0027BC58 /* SNScanViewController.bundle */,
+			);
+			path = SNScanViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		989C0C8C20A592C30027BC58 /* SNScanViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 989C0CB920A592C60027BC58 /* Build configuration list for PBXNativeTarget "SNScanViewController" */;
+			buildPhases = (
+				6EB49088DB9B0D4FA904BA19 /* [CP] Check Pods Manifest.lock */,
+				989C0C8920A592C30027BC58 /* Sources */,
+				989C0C8A20A592C30027BC58 /* Frameworks */,
+				989C0C8B20A592C30027BC58 /* Resources */,
+				4CD1EECF84FED63B405C8C39 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SNScanViewController;
+			productName = SNScanViewController;
+			productReference = 989C0C8D20A592C30027BC58 /* SNScanViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		989C0CA420A592C60027BC58 /* SNScanViewControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 989C0CBC20A592C60027BC58 /* Build configuration list for PBXNativeTarget "SNScanViewControllerTests" */;
+			buildPhases = (
+				4FF7942948353208BBA3C447 /* [CP] Check Pods Manifest.lock */,
+				989C0CA120A592C60027BC58 /* Sources */,
+				989C0CA220A592C60027BC58 /* Frameworks */,
+				989C0CA320A592C60027BC58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				989C0CA720A592C60027BC58 /* PBXTargetDependency */,
+			);
+			name = SNScanViewControllerTests;
+			productName = SNScanViewControllerTests;
+			productReference = 989C0CA520A592C60027BC58 /* SNScanViewControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		989C0CAF20A592C60027BC58 /* SNScanViewControllerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 989C0CBF20A592C60027BC58 /* Build configuration list for PBXNativeTarget "SNScanViewControllerUITests" */;
+			buildPhases = (
+				620D73C841BC2F1E30DA6A12 /* [CP] Check Pods Manifest.lock */,
+				989C0CAC20A592C60027BC58 /* Sources */,
+				989C0CAD20A592C60027BC58 /* Frameworks */,
+				989C0CAE20A592C60027BC58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				989C0CB220A592C60027BC58 /* PBXTargetDependency */,
+			);
+			name = SNScanViewControllerUITests;
+			productName = SNScanViewControllerUITests;
+			productReference = 989C0CB020A592C60027BC58 /* SNScanViewControllerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		989C0C8520A592C30027BC58 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = snlo;
+				TargetAttributes = {
+					989C0C8C20A592C30027BC58 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					989C0CA420A592C60027BC58 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 989C0C8C20A592C30027BC58;
+					};
+					989C0CAF20A592C60027BC58 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 989C0C8C20A592C30027BC58;
+					};
+				};
+			};
+			buildConfigurationList = 989C0C8820A592C30027BC58 /* Build configuration list for PBXProject "SNScanViewController" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = 989C0C8420A592C30027BC58;
+			productRefGroup = 989C0C8E20A592C30027BC58 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				989C0C8C20A592C30027BC58 /* SNScanViewController */,
+				989C0CA420A592C60027BC58 /* SNScanViewControllerTests */,
+				989C0CAF20A592C60027BC58 /* SNScanViewControllerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		989C0C8B20A592C30027BC58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				989C0CCA20A594AF0027BC58 /* SNScanViewController.bundle in Resources */,
+				989C0C9D20A592C50027BC58 /* LaunchScreen.storyboard in Resources */,
+				989C0C9A20A592C50027BC58 /* Assets.xcassets in Resources */,
+				989C0C9820A592C40027BC58 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		989C0CA320A592C60027BC58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		989C0CAE20A592C60027BC58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4CD1EECF84FED63B405C8C39 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SNScanViewController/Pods-SNScanViewController-resources.sh",
+				"${PODS_ROOT}/SNTool/SNTool/SNTool/SNTool.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SNTool.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SNScanViewController/Pods-SNScanViewController-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FF7942948353208BBA3C447 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SNScanViewControllerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		620D73C841BC2F1E30DA6A12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SNScanViewControllerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EB49088DB9B0D4FA904BA19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SNScanViewController-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		989C0C8920A592C30027BC58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				989C0C9520A592C30027BC58 /* ViewController.m in Sources */,
+				989C0CC820A593A80027BC58 /* SNScanTool.m in Sources */,
+				989C0CA020A592C60027BC58 /* main.m in Sources */,
+				989C0CC720A593A80027BC58 /* SNScanViewController.m in Sources */,
+				989C0C9220A592C30027BC58 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		989C0CA120A592C60027BC58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				989C0CAA20A592C60027BC58 /* SNScanViewControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		989C0CAC20A592C60027BC58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				989C0CB520A592C60027BC58 /* SNScanViewControllerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		989C0CA720A592C60027BC58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 989C0C8C20A592C30027BC58 /* SNScanViewController */;
+			targetProxy = 989C0CA620A592C60027BC58 /* PBXContainerItemProxy */;
+		};
+		989C0CB220A592C60027BC58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 989C0C8C20A592C30027BC58 /* SNScanViewController */;
+			targetProxy = 989C0CB120A592C60027BC58 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		989C0C9620A592C40027BC58 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				989C0C9720A592C40027BC58 /* Base */,
+				989C0CCD20A594EB0027BC58 /* zh-Hans */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		989C0C9B20A592C50027BC58 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				989C0C9C20A592C50027BC58 /* Base */,
+				989C0CCE20A594EC0027BC58 /* zh-Hans */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		989C0CB720A592C60027BC58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		989C0CB820A592C60027BC58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		989C0CBA20A592C60027BC58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDB8DC5E579FA09F9C5498E8 /* Pods-SNScanViewController.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SNScanViewController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNScanViewController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		989C0CBB20A592C60027BC58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 809CD6A078F0FC96B36BFEF5 /* Pods-SNScanViewController.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SNScanViewController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNScanViewController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		989C0CBD20A592C60027BC58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3FCBE19BE42CAE0618332AE /* Pods-SNScanViewControllerTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SNScanViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNScanViewControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SNScanViewController.app/SNScanViewController";
+			};
+			name = Debug;
+		};
+		989C0CBE20A592C60027BC58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ABB0E55003B8AC9262E0E8A /* Pods-SNScanViewControllerTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SNScanViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNScanViewControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SNScanViewController.app/SNScanViewController";
+			};
+			name = Release;
+		};
+		989C0CC020A592C60027BC58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35F70654C160D5B943A959A8 /* Pods-SNScanViewControllerUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SNScanViewControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNScanViewControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SNScanViewController;
+			};
+			name = Debug;
+		};
+		989C0CC120A592C60027BC58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ACD0F12FF6261AD0FE3AE82 /* Pods-SNScanViewControllerUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SNScanViewControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNScanViewControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SNScanViewController;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		989C0C8820A592C30027BC58 /* Build configuration list for PBXProject "SNScanViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				989C0CB720A592C60027BC58 /* Debug */,
+				989C0CB820A592C60027BC58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		989C0CB920A592C60027BC58 /* Build configuration list for PBXNativeTarget "SNScanViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				989C0CBA20A592C60027BC58 /* Debug */,
+				989C0CBB20A592C60027BC58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		989C0CBC20A592C60027BC58 /* Build configuration list for PBXNativeTarget "SNScanViewControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				989C0CBD20A592C60027BC58 /* Debug */,
+				989C0CBE20A592C60027BC58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		989C0CBF20A592C60027BC58 /* Build configuration list for PBXNativeTarget "SNScanViewControllerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				989C0CC020A592C60027BC58 /* Debug */,
+				989C0CC120A592C60027BC58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 989C0C8520A592C30027BC58 /* Project object */;
+}

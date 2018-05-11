@@ -1,0 +1,952 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C76817FA5353D989D7BC33E8C5997B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409899CE1143F81E8130E2069D59605B /* CoreGraphics.framework */; };
+		1D79B2658F6F1588112BCD8AFBC431D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12992E853CAE14F2102525E0D84ADAB5 /* Foundation.framework */; };
+		3313E380655519331666A3D2B82FA392 /* Pods-SNScanViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE5D72D35853D4DCACFB227A0BC7215 /* Pods-SNScanViewController-dummy.m */; };
+		3D47E9A81AEC0E63519A5240AF2979E8 /* NSString+SNTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 440AA1CE93E7B2F7E14FB8573661AF0B /* NSString+SNTool.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4FE87ED6FF62D0AAC5AB25B5D8B2D7C5 /* SNTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3BEF2D2A8F61BD0B5EDD74C10C6255 /* SNTool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5743AE6886A9FB987F07ABFFF2B20338 /* Pods-SNScanViewControllerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3130FD40EA27B805462600BF3667F /* Pods-SNScanViewControllerTests-dummy.m */; };
+		5F870E05138F0D01E1E17154AD40E128 /* Singletion.h in Headers */ = {isa = PBXBuildFile; fileRef = 789AB4D595F3D3D06052292D6E077913 /* Singletion.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		61AAC00D76DC606C5B5F3725DFB5B563 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12992E853CAE14F2102525E0D84ADAB5 /* Foundation.framework */; };
+		6436CB1EF6980D12F785C9E2C6674F05 /* SNTool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD1B388613F28771075E6A363AD9125 /* SNTool-dummy.m */; };
+		6837AD005926AB2974513453DB787C5A /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2FA53C873B472A45FE331DA5634F3C /* MBProgressHUD-dummy.m */; };
+		7291E906AE8A3C1F92183154FE65DCDD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F7BDB2580B244756CFA046131516EF2 /* QuartzCore.framework */; };
+		897E2BE6A305D26BEF1B828D55F0F1DC /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = B22F3400BD4E4727DEEDC158B8616B57 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		93F12B05D8333C37D9CBEA3D1782CC04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12992E853CAE14F2102525E0D84ADAB5 /* Foundation.framework */; };
+		9998772AD191606CD3651F2EC11FBECB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12992E853CAE14F2102525E0D84ADAB5 /* Foundation.framework */; };
+		ACE9CCCB14CA2160EF28D33A6125DD0A /* SNTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 64DB9AF3A6B603A6D403F0D824F9DEF3 /* SNTool.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BF42C52A84348EDEE3568B9AAD0D3C2C /* Pods-SNScanViewControllerUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F631C793A61A21AE8B97357EA621B55 /* Pods-SNScanViewControllerUITests-dummy.m */; };
+		C3FBBBC45E67DB35DFEAE7FDD2E49FB8 /* SNTololMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 61050C90D7C1204834A36691D61690E3 /* SNTololMacro.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D72CEEC904E3D225616B05713DC197B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12992E853CAE14F2102525E0D84ADAB5 /* Foundation.framework */; };
+		E6EB93F9F0E4C5727BFC3147BA91C599 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE7FFB1970B5870516C0A2492DBAC61 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EF29CC4C1096BD20C86A3BCEA2A8F2CE /* NSString+SNTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C1EDA7935EDD5EBB03D3B36C2E28FB9A /* NSString+SNTool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4327F8B569D6A14452A7E95D511D0856 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 586F2DFA9BDCC6675C2546793A69E5CC;
+			remoteInfo = MBProgressHUD;
+		};
+		471FA0B517200F411E9AB07D06CA3FD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D86D54EE375C2F2481FC1DC3B3B975C;
+			remoteInfo = "Pods-SNScanViewController";
+		};
+		BACE841B619E0CF0AA47ADCCF26C5EDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B79A3AD2971B7728B64D3114BAD2059;
+			remoteInfo = SNTool;
+		};
+		D660FD099CDFBBDF46BFF0375464E368 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D86D54EE375C2F2481FC1DC3B3B975C;
+			remoteInfo = "Pods-SNScanViewController";
+		};
+		F27908998CCD8B6059AEDC4053B64B5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 586F2DFA9BDCC6675C2546793A69E5CC;
+			remoteInfo = MBProgressHUD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05EFB3C19675C84E40684A15419092B4 /* Pods-SNScanViewController-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SNScanViewController-acknowledgements.markdown"; sourceTree = "<group>"; };
+		120030A1DA242A7A95147430439DAAE7 /* Pods-SNScanViewController-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SNScanViewController-frameworks.sh"; sourceTree = "<group>"; };
+		12992E853CAE14F2102525E0D84ADAB5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		15F3AA45F7FE84EE591BA95907E669C4 /* SNTool.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SNTool.bundle; path = SNTool/SNTool/SNTool.bundle; sourceTree = "<group>"; };
+		1F631C793A61A21AE8B97357EA621B55 /* Pods-SNScanViewControllerUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SNScanViewControllerUITests-dummy.m"; sourceTree = "<group>"; };
+		22BA71AAB7B5E78778B6E02952B1FB99 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		26DE5AD1A31D98BCAF3DA8E381EB6506 /* Pods-SNScanViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SNScanViewController.release.xcconfig"; sourceTree = "<group>"; };
+		2A2FA53C873B472A45FE331DA5634F3C /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		2AD50B0A216F0831C839BF4967DE4199 /* Pods-SNScanViewController-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SNScanViewController-acknowledgements.plist"; sourceTree = "<group>"; };
+		32F3067ED1BF5283C46DDDA372EE88FF /* Pods-SNScanViewControllerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SNScanViewControllerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3B121D94749F65975418154E77604E9C /* Pods-SNScanViewControllerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SNScanViewControllerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3B8A8E20047268A011CB7C7EF3D8C7ED /* SNTool.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SNTool.xcconfig; sourceTree = "<group>"; };
+		409899CE1143F81E8130E2069D59605B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		440AA1CE93E7B2F7E14FB8573661AF0B /* NSString+SNTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+SNTool.h"; path = "SNTool/SNTool/NSString+SNTool.h"; sourceTree = "<group>"; };
+		483710F0408729C56AADC226D2AF2A08 /* Pods-SNScanViewControllerTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SNScanViewControllerTests-frameworks.sh"; sourceTree = "<group>"; };
+		4BF3130FD40EA27B805462600BF3667F /* Pods-SNScanViewControllerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SNScanViewControllerTests-dummy.m"; sourceTree = "<group>"; };
+		4DD1AD529C417044D779966D20AAEE6E /* Pods-SNScanViewControllerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SNScanViewControllerTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		53AB8469E754E298ED9EB179E9571254 /* Pods-SNScanViewControllerTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SNScanViewControllerTests-resources.sh"; sourceTree = "<group>"; };
+		5EE5D72D35853D4DCACFB227A0BC7215 /* Pods-SNScanViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SNScanViewController-dummy.m"; sourceTree = "<group>"; };
+		5F5F448D6B7C78F03C4CAD709B607E09 /* Pods-SNScanViewController-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SNScanViewController-resources.sh"; sourceTree = "<group>"; };
+		5F7BDB2580B244756CFA046131516EF2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		61050C90D7C1204834A36691D61690E3 /* SNTololMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SNTololMacro.h; path = SNTool/SNTool/SNTololMacro.h; sourceTree = "<group>"; };
+		615C435ACB0D4DC4B37C8763DC5B8570 /* Pods-SNScanViewControllerUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SNScanViewControllerUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		64DB9AF3A6B603A6D403F0D824F9DEF3 /* SNTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SNTool.h; path = SNTool/SNTool/SNTool.h; sourceTree = "<group>"; };
+		749518E09AD3BB35F912053C04EBC8A8 /* Pods-SNScanViewControllerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SNScanViewControllerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		789AB4D595F3D3D06052292D6E077913 /* Singletion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Singletion.h; path = SNTool/SNTool/Singletion.h; sourceTree = "<group>"; };
+		80EF319054295F13B20C45C7886BC1A3 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		897893516F7004CA770FA187E0473D52 /* libPods-SNScanViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SNScanViewController.a"; path = "libPods-SNScanViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		917900C20B33167F7767F0CE64A7A744 /* Pods-SNScanViewControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SNScanViewControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93CA322BD85EDC12354E4DA4FD3426A1 /* Pods-SNScanViewControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SNScanViewControllerTests.release.xcconfig"; sourceTree = "<group>"; };
+		9E075860CE789304144584C35F87668C /* Pods-SNScanViewControllerUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SNScanViewControllerUITests-frameworks.sh"; sourceTree = "<group>"; };
+		A6AC359167B0C0FE3F82D38730F21826 /* Pods-SNScanViewControllerUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SNScanViewControllerUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A7E98F300F1838DBAB933C402F04B7A1 /* Pods-SNScanViewControllerUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SNScanViewControllerUITests-resources.sh"; sourceTree = "<group>"; };
+		ADE7FFB1970B5870516C0A2492DBAC61 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		B09022956B2CA1BFBA16FC0D720B57E3 /* libSNTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSNTool.a; path = libSNTool.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B22F3400BD4E4727DEEDC158B8616B57 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		BD107D17366E997EE19FFA5D002B46AF /* libPods-SNScanViewControllerUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SNScanViewControllerUITests.a"; path = "libPods-SNScanViewControllerUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF3BEF2D2A8F61BD0B5EDD74C10C6255 /* SNTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SNTool.m; path = SNTool/SNTool/SNTool.m; sourceTree = "<group>"; };
+		C1EDA7935EDD5EBB03D3B36C2E28FB9A /* NSString+SNTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+SNTool.m"; path = "SNTool/SNTool/NSString+SNTool.m"; sourceTree = "<group>"; };
+		DFC3CEE5302246571A7025F5E92C17F0 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBProgressHUD.a; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA95DA3D6CA986F500D07B5A81329ABB /* Pods-SNScanViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SNScanViewController.debug.xcconfig"; sourceTree = "<group>"; };
+		EE68181F56C098DEA564E089C3E86F82 /* libPods-SNScanViewControllerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SNScanViewControllerTests.a"; path = "libPods-SNScanViewControllerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F552BA49EC849AC38672ED823DB4B43E /* SNTool-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SNTool-prefix.pch"; sourceTree = "<group>"; };
+		FFD1B388613F28771075E6A363AD9125 /* SNTool-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SNTool-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		091233D7ADB12EA856B5F140E5517562 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9998772AD191606CD3651F2EC11FBECB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94A201F7648FD50A121E05776AC00B9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D72CEEC904E3D225616B05713DC197B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6A6914DE23EDC3D0A5D468CFAE2C7E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D79B2658F6F1588112BCD8AFBC431D8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D80057318A913FE13A2C1CEFC3E2BFBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61AAC00D76DC606C5B5F3725DFB5B563 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9AC974E3329F79899A7B3BE290FC894 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C76817FA5353D989D7BC33E8C5997B5 /* CoreGraphics.framework in Frameworks */,
+				93F12B05D8333C37D9CBEA3D1782CC04 /* Foundation.framework in Frameworks */,
+				7291E906AE8A3C1F92183154FE65DCDD /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		014E694C92EC765F8EC9319122D2A8FA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B8A8E20047268A011CB7C7EF3D8C7ED /* SNTool.xcconfig */,
+				FFD1B388613F28771075E6A363AD9125 /* SNTool-dummy.m */,
+				F552BA49EC849AC38672ED823DB4B43E /* SNTool-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SNTool";
+			sourceTree = "<group>";
+		};
+		03383BDAA3665A6AEB62C5DCA44D0303 /* Pods-SNScanViewControllerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A6AC359167B0C0FE3F82D38730F21826 /* Pods-SNScanViewControllerUITests-acknowledgements.markdown */,
+				615C435ACB0D4DC4B37C8763DC5B8570 /* Pods-SNScanViewControllerUITests-acknowledgements.plist */,
+				1F631C793A61A21AE8B97357EA621B55 /* Pods-SNScanViewControllerUITests-dummy.m */,
+				9E075860CE789304144584C35F87668C /* Pods-SNScanViewControllerUITests-frameworks.sh */,
+				A7E98F300F1838DBAB933C402F04B7A1 /* Pods-SNScanViewControllerUITests-resources.sh */,
+				749518E09AD3BB35F912053C04EBC8A8 /* Pods-SNScanViewControllerUITests.debug.xcconfig */,
+				3B121D94749F65975418154E77604E9C /* Pods-SNScanViewControllerUITests.release.xcconfig */,
+			);
+			name = "Pods-SNScanViewControllerUITests";
+			path = "Target Support Files/Pods-SNScanViewControllerUITests";
+			sourceTree = "<group>";
+		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A4DBD434EA75DD3EDD3494C46AE6968 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		34D36C71E8AAA36280725B8E3DB4FE16 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				B22F3400BD4E4727DEEDC158B8616B57 /* MBProgressHUD.h */,
+				ADE7FFB1970B5870516C0A2492DBAC61 /* MBProgressHUD.m */,
+				6174B4423FBBB2D4E8B1CE74AB3B144F /* Support Files */,
+			);
+			name = MBProgressHUD;
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		34F88FACE897604DCB37C192F913F5CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DFC3CEE5302246571A7025F5E92C17F0 /* libMBProgressHUD.a */,
+				897893516F7004CA770FA187E0473D52 /* libPods-SNScanViewController.a */,
+				EE68181F56C098DEA564E089C3E86F82 /* libPods-SNScanViewControllerTests.a */,
+				BD107D17366E997EE19FFA5D002B46AF /* libPods-SNScanViewControllerUITests.a */,
+				B09022956B2CA1BFBA16FC0D720B57E3 /* libSNTool.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A4DBD434EA75DD3EDD3494C46AE6968 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				409899CE1143F81E8130E2069D59605B /* CoreGraphics.framework */,
+				12992E853CAE14F2102525E0D84ADAB5 /* Foundation.framework */,
+				5F7BDB2580B244756CFA046131516EF2 /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6174B4423FBBB2D4E8B1CE74AB3B144F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				22BA71AAB7B5E78778B6E02952B1FB99 /* MBProgressHUD.xcconfig */,
+				2A2FA53C873B472A45FE331DA5634F3C /* MBProgressHUD-dummy.m */,
+				80EF319054295F13B20C45C7886BC1A3 /* MBProgressHUD-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MBProgressHUD";
+			sourceTree = "<group>";
+		};
+		68D2406C3C36637F13EBD439C1C76F6B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				805C9A9F2204189262AE665FFD1D3F19 /* Pods-SNScanViewController */,
+				86684264AB4F6445725EAB9E50537C95 /* Pods-SNScanViewControllerTests */,
+				03383BDAA3665A6AEB62C5DCA44D0303 /* Pods-SNScanViewControllerUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				CA97E452F8F289269ABE59BFD6F17A8D /* Pods */,
+				34F88FACE897604DCB37C192F913F5CD /* Products */,
+				68D2406C3C36637F13EBD439C1C76F6B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		805C9A9F2204189262AE665FFD1D3F19 /* Pods-SNScanViewController */ = {
+			isa = PBXGroup;
+			children = (
+				05EFB3C19675C84E40684A15419092B4 /* Pods-SNScanViewController-acknowledgements.markdown */,
+				2AD50B0A216F0831C839BF4967DE4199 /* Pods-SNScanViewController-acknowledgements.plist */,
+				5EE5D72D35853D4DCACFB227A0BC7215 /* Pods-SNScanViewController-dummy.m */,
+				120030A1DA242A7A95147430439DAAE7 /* Pods-SNScanViewController-frameworks.sh */,
+				5F5F448D6B7C78F03C4CAD709B607E09 /* Pods-SNScanViewController-resources.sh */,
+				EA95DA3D6CA986F500D07B5A81329ABB /* Pods-SNScanViewController.debug.xcconfig */,
+				26DE5AD1A31D98BCAF3DA8E381EB6506 /* Pods-SNScanViewController.release.xcconfig */,
+			);
+			name = "Pods-SNScanViewController";
+			path = "Target Support Files/Pods-SNScanViewController";
+			sourceTree = "<group>";
+		};
+		822C174482AE007BCEA38FF54C53642E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				15F3AA45F7FE84EE591BA95907E669C4 /* SNTool.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		86684264AB4F6445725EAB9E50537C95 /* Pods-SNScanViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				32F3067ED1BF5283C46DDDA372EE88FF /* Pods-SNScanViewControllerTests-acknowledgements.markdown */,
+				4DD1AD529C417044D779966D20AAEE6E /* Pods-SNScanViewControllerTests-acknowledgements.plist */,
+				4BF3130FD40EA27B805462600BF3667F /* Pods-SNScanViewControllerTests-dummy.m */,
+				483710F0408729C56AADC226D2AF2A08 /* Pods-SNScanViewControllerTests-frameworks.sh */,
+				53AB8469E754E298ED9EB179E9571254 /* Pods-SNScanViewControllerTests-resources.sh */,
+				917900C20B33167F7767F0CE64A7A744 /* Pods-SNScanViewControllerTests.debug.xcconfig */,
+				93CA322BD85EDC12354E4DA4FD3426A1 /* Pods-SNScanViewControllerTests.release.xcconfig */,
+			);
+			name = "Pods-SNScanViewControllerTests";
+			path = "Target Support Files/Pods-SNScanViewControllerTests";
+			sourceTree = "<group>";
+		};
+		CA97E452F8F289269ABE59BFD6F17A8D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34D36C71E8AAA36280725B8E3DB4FE16 /* MBProgressHUD */,
+				D20897EBC3D26EA949CD39A90C0DAD1C /* SNTool */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D20897EBC3D26EA949CD39A90C0DAD1C /* SNTool */ = {
+			isa = PBXGroup;
+			children = (
+				440AA1CE93E7B2F7E14FB8573661AF0B /* NSString+SNTool.h */,
+				C1EDA7935EDD5EBB03D3B36C2E28FB9A /* NSString+SNTool.m */,
+				789AB4D595F3D3D06052292D6E077913 /* Singletion.h */,
+				61050C90D7C1204834A36691D61690E3 /* SNTololMacro.h */,
+				64DB9AF3A6B603A6D403F0D824F9DEF3 /* SNTool.h */,
+				BF3BEF2D2A8F61BD0B5EDD74C10C6255 /* SNTool.m */,
+				822C174482AE007BCEA38FF54C53642E /* Resources */,
+				014E694C92EC765F8EC9319122D2A8FA /* Support Files */,
+			);
+			name = SNTool;
+			path = SNTool;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1B1D84BCA4F7BDAE79C37DF88C9DCE23 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				897E2BE6A305D26BEF1B828D55F0F1DC /* MBProgressHUD.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFB8FD483B046DE142DE64B48CBEA435 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D47E9A81AEC0E63519A5240AF2979E8 /* NSString+SNTool.h in Headers */,
+				5F870E05138F0D01E1E17154AD40E128 /* Singletion.h in Headers */,
+				C3FBBBC45E67DB35DFEAE7FDD2E49FB8 /* SNTololMacro.h in Headers */,
+				ACE9CCCB14CA2160EF28D33A6125DD0A /* SNTool.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1D86D54EE375C2F2481FC1DC3B3B975C /* Pods-SNScanViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 788FFF5D024791682E5E2F30A7BD0CC9 /* Build configuration list for PBXNativeTarget "Pods-SNScanViewController" */;
+			buildPhases = (
+				F87CAAA7FD59368A6FD48DCB9C35A93B /* Sources */,
+				C6A6914DE23EDC3D0A5D468CFAE2C7E2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				607B50DCF7E1DC3793149CD477EC18B3 /* PBXTargetDependency */,
+				6843B483E89F9CD303830A4C9B7523A4 /* PBXTargetDependency */,
+			);
+			name = "Pods-SNScanViewController";
+			productName = "Pods-SNScanViewController";
+			productReference = 897893516F7004CA770FA187E0473D52 /* libPods-SNScanViewController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		586F2DFA9BDCC6675C2546793A69E5CC /* MBProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B44251FA50022CA55D4B2FBE1468C76 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
+			buildPhases = (
+				FCC28E36A289F7E991B78A63CD0251F9 /* Sources */,
+				F9AC974E3329F79899A7B3BE290FC894 /* Frameworks */,
+				1B1D84BCA4F7BDAE79C37DF88C9DCE23 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MBProgressHUD;
+			productName = MBProgressHUD;
+			productReference = DFC3CEE5302246571A7025F5E92C17F0 /* libMBProgressHUD.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5D6B80FED3CF310B48C2DE88129096A0 /* Pods-SNScanViewControllerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 611FD45DF39BE227B2FE9151524A2150 /* Build configuration list for PBXNativeTarget "Pods-SNScanViewControllerUITests" */;
+			buildPhases = (
+				8A16C828F85A8F8B433472EE97185E31 /* Sources */,
+				94A201F7648FD50A121E05776AC00B9E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D3FD546DE540F6AD3C6D01D5516AA8C /* PBXTargetDependency */,
+			);
+			name = "Pods-SNScanViewControllerUITests";
+			productName = "Pods-SNScanViewControllerUITests";
+			productReference = BD107D17366E997EE19FFA5D002B46AF /* libPods-SNScanViewControllerUITests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		69E49FDEAAC55D81A7F7FCC6B2A36063 /* Pods-SNScanViewControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBCF1724166283453E488AEDDBA5899F /* Build configuration list for PBXNativeTarget "Pods-SNScanViewControllerTests" */;
+			buildPhases = (
+				EF9D99556879C825A27B58C4BAFE74EE /* Sources */,
+				D80057318A913FE13A2C1CEFC3E2BFBF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9D3003C0607B3D6F5329B6529A3A6EA /* PBXTargetDependency */,
+			);
+			name = "Pods-SNScanViewControllerTests";
+			productName = "Pods-SNScanViewControllerTests";
+			productReference = EE68181F56C098DEA564E089C3E86F82 /* libPods-SNScanViewControllerTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8B79A3AD2971B7728B64D3114BAD2059 /* SNTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBEF580A8B470F347A6BB0420A2A8133 /* Build configuration list for PBXNativeTarget "SNTool" */;
+			buildPhases = (
+				8F3DAFA11B8A9DBFBD1D9533988AEEF9 /* Sources */,
+				091233D7ADB12EA856B5F140E5517562 /* Frameworks */,
+				BFB8FD483B046DE142DE64B48CBEA435 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21EF6A56F8B8392D7D968B1A52126471 /* PBXTargetDependency */,
+			);
+			name = SNTool;
+			productName = SNTool;
+			productReference = B09022956B2CA1BFBA16FC0D720B57E3 /* libSNTool.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 34F88FACE897604DCB37C192F913F5CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				586F2DFA9BDCC6675C2546793A69E5CC /* MBProgressHUD */,
+				1D86D54EE375C2F2481FC1DC3B3B975C /* Pods-SNScanViewController */,
+				69E49FDEAAC55D81A7F7FCC6B2A36063 /* Pods-SNScanViewControllerTests */,
+				5D6B80FED3CF310B48C2DE88129096A0 /* Pods-SNScanViewControllerUITests */,
+				8B79A3AD2971B7728B64D3114BAD2059 /* SNTool */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A16C828F85A8F8B433472EE97185E31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF42C52A84348EDEE3568B9AAD0D3C2C /* Pods-SNScanViewControllerUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F3DAFA11B8A9DBFBD1D9533988AEEF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF29CC4C1096BD20C86A3BCEA2A8F2CE /* NSString+SNTool.m in Sources */,
+				6436CB1EF6980D12F785C9E2C6674F05 /* SNTool-dummy.m in Sources */,
+				4FE87ED6FF62D0AAC5AB25B5D8B2D7C5 /* SNTool.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF9D99556879C825A27B58C4BAFE74EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5743AE6886A9FB987F07ABFFF2B20338 /* Pods-SNScanViewControllerTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F87CAAA7FD59368A6FD48DCB9C35A93B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3313E380655519331666A3D2B82FA392 /* Pods-SNScanViewController-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCC28E36A289F7E991B78A63CD0251F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6837AD005926AB2974513453DB787C5A /* MBProgressHUD-dummy.m in Sources */,
+				E6EB93F9F0E4C5727BFC3147BA91C599 /* MBProgressHUD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21EF6A56F8B8392D7D968B1A52126471 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBProgressHUD;
+			target = 586F2DFA9BDCC6675C2546793A69E5CC /* MBProgressHUD */;
+			targetProxy = F27908998CCD8B6059AEDC4053B64B5E /* PBXContainerItemProxy */;
+		};
+		607B50DCF7E1DC3793149CD477EC18B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBProgressHUD;
+			target = 586F2DFA9BDCC6675C2546793A69E5CC /* MBProgressHUD */;
+			targetProxy = 4327F8B569D6A14452A7E95D511D0856 /* PBXContainerItemProxy */;
+		};
+		6843B483E89F9CD303830A4C9B7523A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SNTool;
+			target = 8B79A3AD2971B7728B64D3114BAD2059 /* SNTool */;
+			targetProxy = BACE841B619E0CF0AA47ADCCF26C5EDA /* PBXContainerItemProxy */;
+		};
+		7D3FD546DE540F6AD3C6D01D5516AA8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SNScanViewController";
+			target = 1D86D54EE375C2F2481FC1DC3B3B975C /* Pods-SNScanViewController */;
+			targetProxy = 471FA0B517200F411E9AB07D06CA3FD3 /* PBXContainerItemProxy */;
+		};
+		D9D3003C0607B3D6F5329B6529A3A6EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SNScanViewController";
+			target = 1D86D54EE375C2F2481FC1DC3B3B975C /* Pods-SNScanViewController */;
+			targetProxy = D660FD099CDFBBDF46BFF0375464E368 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0FCC08AB7ADC9FB962E810EE8F301739 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26DE5AD1A31D98BCAF3DA8E381EB6506 /* Pods-SNScanViewController.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14F00A805CB8BD4A51330FB76A07B641 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22BA71AAB7B5E78778B6E02952B1FB99 /* MBProgressHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MBProgressHUD;
+				PRODUCT_NAME = MBProgressHUD;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1EE19F5DD95931924296F637BF18BD8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		3E606052F2DB529981F32BD030B3C3CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 917900C20B33167F7767F0CE64A7A744 /* Pods-SNScanViewControllerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6022C5433B1469F579D3947C1337E825 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93CA322BD85EDC12354E4DA4FD3426A1 /* Pods-SNScanViewControllerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6875EB9D2EF5521ED479BC2E5687250A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22BA71AAB7B5E78778B6E02952B1FB99 /* MBProgressHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MBProgressHUD;
+				PRODUCT_NAME = MBProgressHUD;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6CBE1369CD996818E5EC928C487DDAE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA95DA3D6CA986F500D07B5A81329ABB /* Pods-SNScanViewController.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9CE29F470E17B58D1D9C6AA869884086 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B121D94749F65975418154E77604E9C /* Pods-SNScanViewControllerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D434087CC83C36AC813CB79B1BFEEC50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B8A8E20047268A011CB7C7EF3D8C7ED /* SNTool.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SNTool/SNTool-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SNTool;
+				PRODUCT_NAME = SNTool;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E17293E158DCBC59299BD6C512BB20D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 749518E09AD3BB35F912053C04EBC8A8 /* Pods-SNScanViewControllerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED465DAA9895FD0CB0015F68DC212245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B8A8E20047268A011CB7C7EF3D8C7ED /* SNTool.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SNTool/SNTool-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SNTool;
+				PRODUCT_NAME = SNTool;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4568DEE257655D290C2B9CEAB37C934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EE19F5DD95931924296F637BF18BD8F /* Debug */,
+				F4568DEE257655D290C2B9CEAB37C934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		611FD45DF39BE227B2FE9151524A2150 /* Build configuration list for PBXNativeTarget "Pods-SNScanViewControllerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E17293E158DCBC59299BD6C512BB20D4 /* Debug */,
+				9CE29F470E17B58D1D9C6AA869884086 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B44251FA50022CA55D4B2FBE1468C76 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6875EB9D2EF5521ED479BC2E5687250A /* Debug */,
+				14F00A805CB8BD4A51330FB76A07B641 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		788FFF5D024791682E5E2F30A7BD0CC9 /* Build configuration list for PBXNativeTarget "Pods-SNScanViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CBE1369CD996818E5EC928C487DDAE9 /* Debug */,
+				0FCC08AB7ADC9FB962E810EE8F301739 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBEF580A8B470F347A6BB0420A2A8133 /* Build configuration list for PBXNativeTarget "SNTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D434087CC83C36AC813CB79B1BFEEC50 /* Debug */,
+				ED465DAA9895FD0CB0015F68DC212245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBCF1724166283453E488AEDDBA5899F /* Build configuration list for PBXNativeTarget "Pods-SNScanViewControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E606052F2DB529981F32BD030B3C3CE /* Debug */,
+				6022C5433B1469F579D3947C1337E825 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
