@@ -23,6 +23,7 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+//    pod trunk push SNScanViewController.podspec --verbose --allow-warnings --use-libraries
     
     UIButton * button = [UIButton buttonWithType:UIButtonTypeSystem];
     button.frame = CGRectMake(24, 200, 60, 60);
