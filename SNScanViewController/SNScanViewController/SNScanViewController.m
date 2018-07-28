@@ -11,6 +11,10 @@
 
 #import "SNScanTool.h"
 
+#import "ViewModelSNScan.h"
+#import "SNScanView.h"
+
+
 #define SNSACN_ALPHA 0.3
 #define SNSACN_RECT CGSizeMake(255, 255)
 #define SNSACN_SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
@@ -21,14 +25,6 @@ typedef void(^CanceledBlock)(void);
 typedef void(^ScanedBlock)(NSString * scanValue);
 
 @interface SNScanViewController ()<AVCaptureMetadataOutputObjectsDelegate,UIAlertViewDelegate>
-
-@property (nonatomic, strong) UIView * line;
-
-@property (nonatomic, assign) CGRect scanRect;
-@property (nonatomic, strong) UIToolbar * backgroudView;
-
-@property (nonatomic, strong) UIButton * buttonCancel;
-@property (nonatomic, strong) UIBarButtonItem * itemCancel;
 
 @property (nonatomic, strong) AVCaptureSession *session;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *preview;
@@ -101,6 +97,8 @@ typedef void(^ScanedBlock)(NSString * scanValue);
 }
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
+    
+    
 }
 
 #pragma mark -- <AVCaptureMetadataOutputObjectsDelegate>、、
@@ -194,7 +192,7 @@ typedef void(^ScanedBlock)(NSString * scanValue);
 	self.title = @"扫描";
 
 	[self.view.layer insertSublayer:self.preview atIndex:0];
-
+    
     [self.view addSubview:self.backgroudView];
     
 	[self sn_scanAddMaskToView:self.backgroudView withRoundedRect:self.scanRect cornerRadius:0];
@@ -274,7 +272,7 @@ typedef void(^ScanedBlock)(NSString * scanValue);
 }
 - (UIBarButtonItem *)itemCancel {
 	if (!_itemCancel) {
-		_itemCancel = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(handleItemCancel:)];
+		_itemCancel = [[UIBarButtonItem alloc] initWithTitle:@"取消xx" style:UIBarButtonItemStylePlain target:self action:@selector(handleItemCancel:)];
 	} return _itemCancel;
 }
 
@@ -309,6 +307,8 @@ typedef void(^ScanedBlock)(NSString * scanValue);
                     }
                 }
             } actionsStatement:@"取消",@"确认", nil];
+        } else if (authStatus == AVAuthorizationStatusNotDetermined) {
+            [SNTool showAlertStyle:UIAlertControllerStyleAlert title:nil msg:@"当前设备不支持相机模式" chooseBlock:nil actionsStatement:@"确定", nil];
         } else {
             NSMutableArray *types =
             [NSMutableArray arrayWithArray:@[AVMetadataObjectTypeUPCECode,

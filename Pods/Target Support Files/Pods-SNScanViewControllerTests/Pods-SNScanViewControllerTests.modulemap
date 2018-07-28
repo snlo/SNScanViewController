@@ -1,0 +1,6 @@
+framework module Pods_SNScanViewControllerTests {
+  umbrella header "Pods-SNScanViewControllerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

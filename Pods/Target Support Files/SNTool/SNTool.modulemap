@@ -1,0 +1,6 @@
+framework module SNTool {
+  umbrella header "SNTool-umbrella.h"
+
+  export *
+  module * { export * }
+}

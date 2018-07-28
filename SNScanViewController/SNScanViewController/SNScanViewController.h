@@ -70,4 +70,13 @@
  */
 - (void)offTorch;
 
+
+@property (nonatomic, strong) UIView * line;
+
+@property (nonatomic, assign) CGRect scanRect;
+@property (nonatomic, strong) UIToolbar * backgroudView;
+
+@property (nonatomic, strong) UIButton * buttonCancel;
+@property (nonatomic, strong) UIBarButtonItem * itemCancel;
+
 @end

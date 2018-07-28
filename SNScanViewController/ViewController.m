@@ -14,6 +14,8 @@
 
 #import "SNScanTool.h"
 
+#import "SNScanView.h"
+
 @interface ViewController ()
 
 @end
@@ -32,19 +34,34 @@
     [self.view addSubview:button];
     
     NSLog(@"%@",[SNScanTool localizedString:@"取消"]);
-    
+    self.view.backgroundColor = [UIColor blackColor];
 }
 - (void)handleButton:(UIButton *)sender {
+    
+    SNScanView * view = [SNScanView scanViewWithScanSize:CGSizeMake(SCREEN_WIDTH-108, SCREEN_WIDTH-108)];
+    
+    [self.view addSubview:view];
+
+
+    return;
     
     SNScanViewController * VC = [SNScanViewController scanViewController];
     
     VC.themeColor = [UIColor redColor];
     VC.scanLineColor = [UIColor blueColor];
     VC.backgroudStyle = UIBarStyleDefault;
+    VC.backgroudStyle = UIBarStyleBlack;
+    VC.backgroudView.alpha = 0.5;
+    VC.scanRect = CGRectMake(100, 100, 100, 100);
     
-    [self presentViewController:VC animated:YES completion:^{
-        
+    [VC scanedBlock:^(NSString *scanedValue) {
+        [VC dismissViewControllerAnimated:YES completion:^{
+
+        }];
+    } canceledBlock:^{
+        [VC dismissViewControllerAnimated:YES completion:nil];
     }];
+    [self presentViewController:VC animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

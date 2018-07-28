@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26C79C79DE5A2436132929C3 /* libPods-SNScanViewControllerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2060140BF5E761BA18AC35CB /* libPods-SNScanViewControllerUITests.a */; };
+		8D35930CBB41959D01E54FAD /* libPods-SNScanViewControllerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFDDB1D88A8F424AF15BA0EF /* libPods-SNScanViewControllerTests.a */; };
+		98053F1B210C18F50063D50D /* SNScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98053F1A210C18F50063D50D /* SNScanView.m */; };
+		98053F1E210C1A870063D50D /* ViewModelSNScan.m in Sources */ = {isa = PBXBuildFile; fileRef = 98053F1D210C1A870063D50D /* ViewModelSNScan.m */; };
+		98053F20210C44CB0063D50D /* SNScanViewControllerImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98053F1F210C44CB0063D50D /* SNScanViewControllerImages.xcassets */; };
 		989C0C9220A592C30027BC58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C0C9120A592C30027BC58 /* AppDelegate.m */; };
 		989C0C9520A592C30027BC58 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C0C9420A592C30027BC58 /* ViewController.m */; };
 		989C0C9820A592C40027BC58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 989C0C9620A592C40027BC58 /* Main.storyboard */; };
@@ -19,8 +22,8 @@
 		989C0CC720A593A80027BC58 /* SNScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C0CC320A593A80027BC58 /* SNScanViewController.m */; };
 		989C0CC820A593A80027BC58 /* SNScanTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C0CC420A593A80027BC58 /* SNScanTool.m */; };
 		989C0CCA20A594AF0027BC58 /* SNScanViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 989C0CC920A594AF0027BC58 /* SNScanViewController.bundle */; };
-		A1BB2F7E36E854E388BCF94A /* libPods-SNScanViewControllerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77962C0ED413560C14956B21 /* libPods-SNScanViewControllerTests.a */; };
-		B8163264B58A2878214A53D1 /* libPods-SNScanViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C88B350BD8F04A61111E5E1 /* libPods-SNScanViewController.a */; };
+		E12EB34CE080938334744E44 /* libPods-SNScanViewControllerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7766BB6A178535FF27257EBA /* libPods-SNScanViewControllerUITests.a */; };
+		E8BC994C423738937F3A45A0 /* libPods-SNScanViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F8C74F90320F153DB0AB40 /* libPods-SNScanViewController.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,13 +44,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2060140BF5E761BA18AC35CB /* libPods-SNScanViewControllerUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNScanViewControllerUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F70654C160D5B943A959A8 /* Pods-SNScanViewControllerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNScanViewControllerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNScanViewControllerUITests/Pods-SNScanViewControllerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3ABB0E55003B8AC9262E0E8A /* Pods-SNScanViewControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNScanViewControllerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNScanViewControllerTests/Pods-SNScanViewControllerTests.release.xcconfig"; sourceTree = "<group>"; };
-		3C88B350BD8F04A61111E5E1 /* libPods-SNScanViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNScanViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		45F8C74F90320F153DB0AB40 /* libPods-SNScanViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNScanViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ACD0F12FF6261AD0FE3AE82 /* Pods-SNScanViewControllerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNScanViewControllerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNScanViewControllerUITests/Pods-SNScanViewControllerUITests.release.xcconfig"; sourceTree = "<group>"; };
-		77962C0ED413560C14956B21 /* libPods-SNScanViewControllerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNScanViewControllerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7766BB6A178535FF27257EBA /* libPods-SNScanViewControllerUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNScanViewControllerUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		809CD6A078F0FC96B36BFEF5 /* Pods-SNScanViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNScanViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNScanViewController/Pods-SNScanViewController.release.xcconfig"; sourceTree = "<group>"; };
+		98053F19210C18F50063D50D /* SNScanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNScanView.h; sourceTree = "<group>"; };
+		98053F1A210C18F50063D50D /* SNScanView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNScanView.m; sourceTree = "<group>"; };
+		98053F1C210C1A870063D50D /* ViewModelSNScan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModelSNScan.h; sourceTree = "<group>"; };
+		98053F1D210C1A870063D50D /* ViewModelSNScan.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewModelSNScan.m; sourceTree = "<group>"; };
+		98053F1F210C44CB0063D50D /* SNScanViewControllerImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SNScanViewControllerImages.xcassets; sourceTree = "<group>"; };
 		989C0C8D20A592C30027BC58 /* SNScanViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNScanViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		989C0C9020A592C30027BC58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		989C0C9120A592C30027BC58 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -72,6 +79,7 @@
 		989C0CCD20A594EB0027BC58 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		989C0CCE20A594EC0027BC58 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		A3FCBE19BE42CAE0618332AE /* Pods-SNScanViewControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNScanViewControllerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNScanViewControllerTests/Pods-SNScanViewControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BFDDB1D88A8F424AF15BA0EF /* libPods-SNScanViewControllerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNScanViewControllerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB8DC5E579FA09F9C5498E8 /* Pods-SNScanViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNScanViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNScanViewController/Pods-SNScanViewController.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8163264B58A2878214A53D1 /* libPods-SNScanViewController.a in Frameworks */,
+				E8BC994C423738937F3A45A0 /* libPods-SNScanViewController.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1BB2F7E36E854E388BCF94A /* libPods-SNScanViewControllerTests.a in Frameworks */,
+				8D35930CBB41959D01E54FAD /* libPods-SNScanViewControllerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26C79C79DE5A2436132929C3 /* libPods-SNScanViewControllerUITests.a in Frameworks */,
+				E12EB34CE080938334744E44 /* libPods-SNScanViewControllerUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,9 +114,9 @@
 		2AE7C5A98D9A9E5F9ECB771D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3C88B350BD8F04A61111E5E1 /* libPods-SNScanViewController.a */,
-				77962C0ED413560C14956B21 /* libPods-SNScanViewControllerTests.a */,
-				2060140BF5E761BA18AC35CB /* libPods-SNScanViewControllerUITests.a */,
+				45F8C74F90320F153DB0AB40 /* libPods-SNScanViewController.a */,
+				BFDDB1D88A8F424AF15BA0EF /* libPods-SNScanViewControllerTests.a */,
+				7766BB6A178535FF27257EBA /* libPods-SNScanViewControllerUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -188,8 +196,13 @@
 			children = (
 				989C0CC520A593A80027BC58 /* SNScanViewController.h */,
 				989C0CC320A593A80027BC58 /* SNScanViewController.m */,
+				98053F19210C18F50063D50D /* SNScanView.h */,
+				98053F1A210C18F50063D50D /* SNScanView.m */,
+				98053F1C210C1A870063D50D /* ViewModelSNScan.h */,
+				98053F1D210C1A870063D50D /* ViewModelSNScan.m */,
 				989C0CC620A593A80027BC58 /* SNScanTool.h */,
 				989C0CC420A593A80027BC58 /* SNScanTool.m */,
+				98053F1F210C44CB0063D50D /* SNScanViewControllerImages.xcassets */,
 				989C0CC920A594AF0027BC58 /* SNScanViewController.bundle */,
 			);
 			path = SNScanViewController;
@@ -206,7 +219,7 @@
 				989C0C8920A592C30027BC58 /* Sources */,
 				989C0C8A20A592C30027BC58 /* Frameworks */,
 				989C0C8B20A592C30027BC58 /* Resources */,
-				4CD1EECF84FED63B405C8C39 /* [CP] Copy Pods Resources */,
+				01D5045C1FD3F5C766EE4E43 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -304,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				989C0CCA20A594AF0027BC58 /* SNScanViewController.bundle in Resources */,
+				98053F20210C44CB0063D50D /* SNScanViewControllerImages.xcassets in Resources */,
 				989C0C9D20A592C50027BC58 /* LaunchScreen.storyboard in Resources */,
 				989C0C9A20A592C50027BC58 /* Assets.xcassets in Resources */,
 				989C0C9820A592C40027BC58 /* Main.storyboard in Resources */,
@@ -327,7 +341,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4CD1EECF84FED63B405C8C39 /* [CP] Copy Pods Resources */ = {
+		01D5045C1FD3F5C766EE4E43 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -408,6 +422,8 @@
 			files = (
 				989C0C9520A592C30027BC58 /* ViewController.m in Sources */,
 				989C0CC820A593A80027BC58 /* SNScanTool.m in Sources */,
+				98053F1E210C1A870063D50D /* ViewModelSNScan.m in Sources */,
+				98053F1B210C18F50063D50D /* SNScanView.m in Sources */,
 				989C0CA020A592C60027BC58 /* main.m in Sources */,
 				989C0CC720A593A80027BC58 /* SNScanViewController.m in Sources */,
 				989C0C9220A592C30027BC58 /* AppDelegate.m in Sources */,
@@ -585,11 +601,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49VK52PYYX;
 				INFOPLIST_FILE = SNScanViewController/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNScanViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -602,11 +616,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49VK52PYYX;
 				INFOPLIST_FILE = SNScanViewController/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNScanViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -620,11 +632,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SNScanViewControllerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNScanViewControllerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -639,11 +647,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SNScanViewControllerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNScanViewControllerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -657,11 +661,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SNScanViewControllerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNScanViewControllerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -675,11 +675,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SNScanViewControllerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNScanViewControllerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
