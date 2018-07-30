@@ -33,26 +33,15 @@
     [button addTarget:self action:@selector(handleButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     
-    NSLog(@"%@",[SNScanTool localizedString:@"取消"]);
-    self.view.backgroundColor = [UIColor blackColor];
+    
 }
 - (void)handleButton:(UIButton *)sender {
     
-    SNScanView * view = [SNScanView scanViewWithScanSize:CGSizeMake(SCREEN_WIDTH-108, SCREEN_WIDTH-108)];
-    
-    [self.view addSubview:view];
-
-
-    return;
-    
     SNScanViewController * VC = [SNScanViewController scanViewController];
     
-    VC.themeColor = [UIColor redColor];
-    VC.scanLineColor = [UIColor blueColor];
-    VC.backgroudStyle = UIBarStyleDefault;
-    VC.backgroudStyle = UIBarStyleBlack;
-    VC.backgroudView.alpha = 0.5;
-    VC.scanRect = CGRectMake(100, 100, 100, 100);
+    VC.viewScan.durationScan = 1.5;
+//    VC.viewScan.sizeScan = CGSizeMake(100, 100); // xx
+    VC.viewScan.colorScan = [UIColor redColor]; //xx
     
     [VC scanedBlock:^(NSString *scanedValue) {
         [VC dismissViewControllerAnimated:YES completion:^{
@@ -64,10 +53,6 @@
     [self presentViewController:VC animated:YES completion:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-	[super didReceiveMemoryWarning];
-	// Dispose of any resources that can be recreated.
-}
 
 
 @end

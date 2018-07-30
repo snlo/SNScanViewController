@@ -10,9 +10,12 @@
 
 #import "SNScanTool.h"
 
+
 @interface ViewModelSNScan ()
 
 @property (nonatomic, strong) NSString * stringScaned;
+
+@property (nonatomic, strong) UIImagePickerController * imagePickerController;
 
 @end
 
@@ -70,6 +73,29 @@
     return animation;
 }
 
+- (void)selectPictureFromAlbunPhotos:(void(^)(UIImagePickerController *imagePickerController))block {
+    NSArray *mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    //相册权限
+    PHAuthorizationStatus author = [PHPhotoLibrary authorizationStatus];
+    if (author == kCLAuthorizationStatusRestricted || author == kCLAuthorizationStatusDenied){
+        //无权限 引导去开启
+        [SNTool showAlertStyle:UIAlertControllerStyleAlert title:@"提示" msg:@"没有相册访问权限，是否去设置中开启" chooseBlock:^(NSInteger actionIndx) {
+            if (actionIndx == 1) {
+                NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+                if ([[UIApplication sharedApplication] canOpenURL:url]) {
+                    [[UIApplication sharedApplication] openURL:url options:@{UIApplicationOpenURLOptionsSourceApplicationKey : @YES}  completionHandler:nil];
+                }
+            }
+        } actionsStatement:@"取消",@"确认", nil];
+    }
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+        self.imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        self.imagePickerController.mediaTypes = @[mediaTypes[0]];
+        if (block) {
+            block(self.imagePickerController);
+        }
+    }
+}
 #pragma mark -- <AVCaptureMetadataOutputObjectsDelegate>、、
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
     NSString * stringValue = @"";
@@ -82,6 +108,7 @@
             [self playBeepPath:[NSString stringWithFormat:@"/System/Library/Audio/UISounds/%@.%@",@"new-mail",@"caf"]];
             self.scanedBlock(stringValue);
         }
+        
         [self.session stopRunning];
         
 //        [self.line.layer removeAllAnimations];
@@ -151,6 +178,73 @@
         _preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
         _preview.frame = CGRectMake(0, 0, SNSACN_SCREEN_WIDTH, SNSACN_SCREEN_HIGHT);
     } return _preview;
+}
+
+- (UIImagePickerController *)imagePickerController {
+    if (!_imagePickerController) {
+        _imagePickerController = [[UIImagePickerController alloc]init];
+        _imagePickerController.delegate = self;
+    } return _imagePickerController;
+}
+
+#pragma mark -- <UIImagePickerControllerDelegate,
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage * imageSimple = [UIImage new];
+    if (picker.sourceType == UIImagePickerControllerSourceTypePhotoLibrary) {
+        
+        UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+        CGFloat width = SNSACN_SCREEN_WIDTH;
+        CGFloat height = SNSACN_SCREEN_WIDTH * image.size.height / image.size.width;
+        imageSimple = [self imageWithImageSimple:image scaledToSize:CGSizeMake(width, height)];
+        [self handel:imageSimple];
+    }
+    [self.imagePickerController dismissViewControllerAnimated:YES completion:nil];
+    if (self.selectedImageBlock) {
+        self.selectedImageBlock(imageSimple);
+    }
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [self.imagePickerController dismissViewControllerAnimated:YES completion:nil];
+    if (self.selectedCancelBlock) self.selectedCancelBlock();
+}
+
+- (UIImage *)imageWithImageSimple:(UIImage *)image scaledToSize:(CGSize )newSize {
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0);
+    [image drawInRect : CGRectMake ( 0 , 0 ,newSize.width ,newSize.height )];
+    UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext ();
+    UIGraphicsEndImageContext ();
+    return newImage;
+}
+
+- (void)selectedBlock:(void(^)(UIImage *image))selectedBlock cancelBlock:(void(^)(void))cancelBlock {
+    if (selectedBlock) self.selectedImageBlock = selectedBlock;
+    if (cancelBlock) self.selectedCancelBlock = cancelBlock;
+}
+
+- (void)handel:(UIImage * )newImage {
+//    CIDetector*detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:nil options:@{ CIDetectorAccuracy : CIDetectorAccuracyHigh}];
+//
+//    NSArray *features = [detector featuresInImage:[CIImage imageWithCGImage:newImage.CGImage]];
+//    if (features.count >=1) {
+//        CIQRCodeFeature *feature = [features objectAtIndex:0];
+//        NSString *scannedResult = feature.messageString;
+//        NSLog(@"%@",scannedResult);
+//    }
+    
+    CIImage* ciImage = [CIImage imageWithCGImage:newImage.CGImage];
+    NSLog(@"image -- - %@",newImage);
+    //创建探测器
+    CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:nil options:@{CIDetectorAccuracy: CIDetectorAccuracyLow}];
+    NSArray *feature = [detector featuresInImage:ciImage];
+    
+    NSString *content = @"";
+    //取出探测到的数据
+    for (CIQRCodeFeature *result in feature) {
+        content = result.messageString;
+        NSLog(@" - -- -%@",content);
+    }
+
 }
 
 @end

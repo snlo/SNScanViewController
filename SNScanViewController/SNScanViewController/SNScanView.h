@@ -19,14 +19,28 @@
 @property (nonatomic, strong) UIButton * buttonAlbum;
 
 
-@property (nonatomic, strong) UIView * viewScan;
+@property (nonatomic, strong) UIView * viewBackgroud;
 
-@property (nonatomic, strong) UIView * viewTopLine;
+@property (nonatomic, strong) UIView * viewBar;
 
-@property (nonatomic, strong) UIView * viewBottomLine;
+@property (nonatomic, strong) UIView * viewScan; //
+
+@property (nonatomic, strong) UIImageView * imageViewTopLine;
+
+@property (nonatomic, strong) UIImageView * imageViewBottomLine;
 
 @property (nonatomic, strong) UILabel * labelTitle;
 
 @property (nonatomic, strong) UILabel * labelPrompt;
+
+
+
+
+@property (nonatomic, assign) CFTimeInterval durationScan;
+@property (nonatomic, strong) UIColor * colorScan;
+@property (nonatomic, assign) CGSize sizeScan;
+
+- (void)startAnimation;
+- (void)stopAnimation;
 
 @end

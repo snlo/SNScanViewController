@@ -14,13 +14,10 @@
 
 @interface SNScanView ()
 
-@property (nonatomic, strong) UIView *viewBackgroud;
-
-@property (nonatomic, strong) UIView * viewBar;
-
 @property (nonatomic, strong) UIView * viewScanSuper;
 
-@property (nonatomic, assign) CGSize scanSize;
+@property (nonatomic, strong) CABasicAnimation * topLineAnimation;
+@property (nonatomic, strong) CABasicAnimation * bottomLineAnimation;
 
 @end
 
@@ -35,24 +32,24 @@
     self = [super init];
     if (self) {
         self.frame = CGRectMake(0, 0, SNSACN_SCREEN_WIDTH, SNSACN_SCREEN_HIGHT);
-        self.scanSize = scanSize;
+        self.sizeScan = scanSize;
+        self.colorScan = [SNTool colorWithHexString:@"#D9AD65" alpha:1.0f];
+        self.durationScan = 1.5;
         self.viewBackgroud = [[UIView alloc] init];
         self.viewBackgroud.frame = self.bounds;
-        self.viewBackgroud.backgroundColor = [SNTool colorWithHexString:@"#4a4a4a"];
+        self.viewBackgroud.backgroundColor = [SNTool colorWithHexString:@"#4a4a4a" alpha:0.5f];
         [self addSubview:self.viewBackgroud];
         
         [self configureViewBar];
         [self configureViewScan];
         [self configureLabel];
         
-        CGFloat spacing = 4.000f/289.000f * (SNSACN_SCREEN_WIDTH-108.000f);
-        CGFloat width = (SNSACN_SCREEN_WIDTH-108.000f) - spacing*2;
+        CGFloat width = [self fetchWidth];
+        CGFloat height = [self fetchHeight];
         
-        [SNScanTool scanAddMaskToView:self.viewBackgroud withRoundedRect:CGRectMake((SNSACN_SCREEN_WIDTH-width)/2, (SNSACN_SCREEN_HIGHT-width)/2, width, width) cornerRadius:0];
+        [SNScanTool scanAddMaskToView:self.viewBackgroud withRoundedRect:CGRectMake((SNSACN_SCREEN_WIDTH-width)/2, (SNSACN_SCREEN_HIGHT-height)/2, width, height) cornerRadius:0];
         
         [self configureViewLine];
-        
-        [self.viewTopLine.layer addAnimation:[self scaleAnimationformValue:0 toValue:width] forKey:nil];
     }
     return self;
 }
@@ -73,8 +70,8 @@
     });
     self.buttonTouch = ({
         UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button setImage:[UIImage imageNamed:@"SNScanView_turn_on_the_light"] forState:UIControlStateNormal];
-        [button setImage:[UIImage imageNamed:@"SNScanView_turn_off_the_light"] forState:UIControlStateSelected];
+        [button setImage:[UIImage imageNamed:@"SNScanView_turn_off_the_light"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"SNScanView_turn_on_the_light"] forState:UIControlStateSelected];
         [self.viewBar addSubview:button];
         button;
     });
@@ -109,26 +106,79 @@
 - (void)configureViewScan {
     self.viewScan = ({
         UIView * view = [[UIView alloc] init];
-        view.layer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"SNScanViewFrame"].CGImage);
-        [self addSubview:view];
+        view.layer.borderColor = (__bridge CGColorRef _Nullable)(self.colorScan);
+        view.layer.borderWidth = 1;
+        view.backgroundColor = self.colorScan;
+        [self.viewBackgroud addSubview:view];
         view;
     });
     
-    CGFloat spacing = 4.000f/289.000f * (SNSACN_SCREEN_WIDTH-108.000f);
+    UIView * leftTop = ({
+        UIView * view = [[UIView alloc] init];
+        view.backgroundColor = self.colorScan;
+        [self.viewBackgroud addSubview:view];
+        view;
+    });
+    UIView * reightTop = ({
+        UIView * view = [[UIView alloc] init];
+        view.backgroundColor = self.colorScan;
+        [self.viewBackgroud addSubview:view];
+        view;
+    });;
+    UIView * leftBottom = ({
+        UIView * view = [[UIView alloc] init];
+        view.backgroundColor = self.colorScan;
+        [self.viewBackgroud addSubview:view];
+        view;
+    });;
+    UIView * rightBottom = ({
+        UIView * view = [[UIView alloc] init];
+        view.backgroundColor = self.colorScan;
+        [self.viewBackgroud addSubview:view];
+        view;
+    });;
+    
+    [leftTop mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.width.offset(20);
+        make.height.offset(20);
+        make.top.equalTo(self.viewScan.mas_top).offset(-3);
+        make.left.equalTo(self.viewScan.mas_left).offset(-3);
+    }];
+    [reightTop mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.width.offset(20);
+        make.height.offset(20);
+        make.top.equalTo(self.viewScan.mas_top).offset(-3);
+        make.right.equalTo(self.viewScan.mas_right).offset(3);
+    }];
+    [leftBottom mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.width.offset(20);
+        make.height.offset(20);
+        make.left.equalTo(self.viewScan.mas_left).offset(-3);
+        make.bottom.equalTo(self.viewScan.mas_bottom).offset(3);
+    }];
+    [rightBottom mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.width.offset(20);
+        make.height.offset(20);
+        make.right.equalTo(self.viewScan.mas_right).offset(3);
+        make.bottom.equalTo(self.viewScan.mas_bottom).offset(3);
+    }];
+    
+    
+    CGFloat spacing = [self fetchSpacing];
     
     
     self.viewScanSuper = ({
         UIView * view = [[UIView alloc] init];
         view.layer.masksToBounds = YES;
-        [self.viewScan addSubview:view];
+        [self addSubview:view];
         view;
     });
     
     [self.viewScan mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.equalTo(self.viewScan.mas_width).multipliedBy(1);
         make.centerY.equalTo(self.mas_centerY);
-        make.left.equalTo(self.mas_left).offset(54);
-        make.right.equalTo(self.mas_right).offset(-54);
+        make.centerX.equalTo(self.mas_centerX);
+        make.width.offset(self.sizeScan.width);
+        make.height.offset(self.sizeScan.height);
     }];
     [self.viewScanSuper mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.viewScan.mas_top).offset(spacing);
@@ -140,32 +190,30 @@
 }
 
 - (void)configureViewLine {
-    UIImage * imageTop = [UIImage imageNamed:@"SNScanView_scanning_one"];
-    UIImage * imageBottom = [UIImage imageNamed:@"SNScanView_scanning_two"];
-    self.viewTopLine = ({
-        UIView * view = [[UIView alloc] init];
-        view.layer.contents = (__bridge id _Nullable)(imageTop.CGImage);
+    self.imageViewTopLine = ({
+        UIImageView * view = [[UIImageView alloc] init];
+        view.image = [UIImage imageNamed:@"SNScanView_scanning_one"];
         [self.viewScanSuper addSubview:view];
         view;
     });
-    self.viewBottomLine = ({
-        UIView * view = [[UIView alloc] init];
-        view.layer.contents = (__bridge id _Nullable)(imageBottom.CGImage);
+    self.imageViewBottomLine = ({
+        UIImageView * view = [[UIImageView alloc] init];
+        view.image = [UIImage imageNamed:@"SNScanView_scanning_two"];
         [self.viewScanSuper addSubview:view];
         view;
     });
     
-    [self.viewTopLine mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.imageViewTopLine mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.viewScanSuper.mas_top).offset(0);
         make.left.equalTo(self.viewScanSuper.mas_left).offset(0);
         make.right.equalTo(self.viewScanSuper.mas_right).offset(-0);
-        make.height.offset(imageTop.size.height);
+        make.height.offset(self.imageViewTopLine.image.size.height);
     }];
-    [self.viewBottomLine mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.imageViewBottomLine mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.viewScanSuper.mas_bottom).offset(0);
         make.left.equalTo(self.viewScanSuper.mas_left).offset(0);
         make.right.equalTo(self.viewScanSuper.mas_right).offset(-0);
-        make.height.offset(imageBottom.size.height);
+        make.height.offset(self.imageViewBottomLine.image.size.height);
     }];
     
     
@@ -207,24 +255,60 @@
 }
 
 - (CGFloat)fetchSpacing {
-    return 4.000f/289.000f * (SNSACN_SCREEN_WIDTH-108.000f);
+    return 1;
 }
-//- (CGFloat)width {
-//    return <#expression#>
-//}
+- (CGFloat)fetchWidth {
+    return self.sizeScan.width - [self fetchSpacing]*2;
+}
+- (CGFloat)fetchHeight {
+    return self.sizeScan.height - [self fetchSpacing]*2;
+}
 
-- (CABasicAnimation *)scaleAnimationformValue:(CGFloat)fromValue toValue:(CGFloat)toValue {
+- (void)startAnimation {
+    self.topLineAnimation = [self topLineAnimationformValue:0 toValue:[self fetchWidth]+ self.imageViewTopLine.image.size.height];
+    self.bottomLineAnimation = [self bottomLineAnimationformValue:0 toValue:[self fetchWidth]+ self.imageViewBottomLine.image.size.height];
+    
+    [self.imageViewTopLine.layer addAnimation:self.topLineAnimation forKey:nil];
+    [self.imageViewBottomLine.layer addAnimation:self.bottomLineAnimation forKey:nil];
+}
+- (void)stopAnimation {
+    [self.imageViewTopLine.layer removeAllAnimations];
+    [self.imageViewBottomLine.layer removeAllAnimations];
+}
+
+- (CABasicAnimation *)topLineAnimationformValue:(CGFloat)fromValue toValue:(CGFloat)toValue {
     CABasicAnimation *animation;
-    animation=[CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
-    animation.duration = 2;
+    animation = [CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
+    animation.duration = self.durationScan;
     animation.fromValue = [NSNumber numberWithFloat:fromValue];
-    animation.toValue = [NSNumber numberWithFloat:toValue];
-    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    animation.toValue = [NSNumber numberWithFloat:toValue*2];
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     animation.removedOnCompletion = NO;
     animation.fillMode = kCAFillModeForwards;
-    animation.autoreverses = YES;
     animation.repeatCount = MAXFLOAT;
     return animation;
+}
+- (CABasicAnimation *)bottomLineAnimationformValue:(CGFloat)fromValue toValue:(CGFloat)toValue {
+    CABasicAnimation *animation;
+    animation = [CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
+    animation.duration = self.durationScan;
+    animation.beginTime = CACurrentMediaTime() + self.durationScan/2;
+    animation.fromValue = [NSNumber numberWithFloat:fromValue];
+    animation.toValue = [NSNumber numberWithFloat:-toValue*2];
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
+    animation.repeatCount = MAXFLOAT;
+    return animation;
+}
+
+#pragma mark -- getter / setter
+
+- (void)setColorScan:(UIColor *)colorScan {
+    _colorScan = colorScan;
+}
+- (void)setSizeScan:(CGSize)sizeScan {
+    _sizeScan = sizeScan;
 }
 
 @end
