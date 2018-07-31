@@ -16,6 +16,8 @@
 
 #import "SNScanView.h"
 
+#import "ViewModelSNScan.h"
+
 @interface ViewController ()
 
 @end
@@ -37,6 +39,14 @@
 }
 - (void)handleButton:(UIButton *)sender {
     
+//    ViewModelSNScan * viewmoel = [[ViewModelSNScan alloc] init];
+//
+//    UIImage * image = [UIImage imageNamed:@"屏幕快照 2018-07-31 上午9.14.16"];
+//
+//    [viewmoel handel:image];
+//
+//    return;
+    
     SNScanViewController * VC = [SNScanViewController scanViewController];
     
     VC.viewScan.durationScan = 1.5;
@@ -45,7 +55,7 @@
     
     [VC scanedBlock:^(NSString *scanedValue) {
         [VC dismissViewControllerAnimated:YES completion:^{
-
+            [sender setTitle:scanedValue forState:UIControlStateNormal];
         }];
     } canceledBlock:^{
         [VC dismissViewControllerAnimated:YES completion:nil];

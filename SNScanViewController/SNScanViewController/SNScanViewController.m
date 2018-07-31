@@ -115,18 +115,18 @@ typedef void(^ScanedBlock)(NSString * scanValue);
             imageView.image = image;
             imageView.contentMode = UIViewContentModeScaleAspectFit;
             
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            if (![self.viewmodel scanImageQRCode:image]) {
                 [imageView removeFromSuperview];
                 imageView = nil;
                 [self configureUserInterface];
                 [self.viewmodel.session startRunning];
                 [self.viewScan startAnimation];
-                
-            });
-//            [_viewmodel handel:image];
-            
-            
-            
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [SNTool showAlertStyle:UIAlertControllerStyleAlert title:@"" msg:@"识别失败" chooseBlock:^(NSInteger actionIndx) {
+                        
+                    } actionsStatement:@"确定", nil];
+                });
+            }
         } cancelBlock:^{
             
         }];

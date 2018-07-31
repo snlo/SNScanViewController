@@ -11,6 +11,7 @@
 		98053F1B210C18F50063D50D /* SNScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98053F1A210C18F50063D50D /* SNScanView.m */; };
 		98053F1E210C1A870063D50D /* ViewModelSNScan.m in Sources */ = {isa = PBXBuildFile; fileRef = 98053F1D210C1A870063D50D /* ViewModelSNScan.m */; };
 		98053F20210C44CB0063D50D /* SNScanViewControllerImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98053F1F210C44CB0063D50D /* SNScanViewControllerImages.xcassets */; };
+		98283757210FEF7B00503AF7 /* 屏幕快照 2018-07-31 上午9.14.16.png in Resources */ = {isa = PBXBuildFile; fileRef = 98283756210FEF7A00503AF7 /* 屏幕快照 2018-07-31 上午9.14.16.png */; };
 		989C0C9220A592C30027BC58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C0C9120A592C30027BC58 /* AppDelegate.m */; };
 		989C0C9520A592C30027BC58 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C0C9420A592C30027BC58 /* ViewController.m */; };
 		989C0C9820A592C40027BC58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 989C0C9620A592C40027BC58 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		98053F1C210C1A870063D50D /* ViewModelSNScan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModelSNScan.h; sourceTree = "<group>"; };
 		98053F1D210C1A870063D50D /* ViewModelSNScan.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewModelSNScan.m; sourceTree = "<group>"; };
 		98053F1F210C44CB0063D50D /* SNScanViewControllerImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SNScanViewControllerImages.xcassets; sourceTree = "<group>"; };
+		98283756210FEF7A00503AF7 /* 屏幕快照 2018-07-31 上午9.14.16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "屏幕快照 2018-07-31 上午9.14.16.png"; sourceTree = "<group>"; };
 		989C0C8D20A592C30027BC58 /* SNScanViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNScanViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		989C0C9020A592C30027BC58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		989C0C9120A592C30027BC58 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				989C0C9120A592C30027BC58 /* AppDelegate.m */,
 				989C0C9320A592C30027BC58 /* ViewController.h */,
 				989C0C9420A592C30027BC58 /* ViewController.m */,
+				98283756210FEF7A00503AF7 /* 屏幕快照 2018-07-31 上午9.14.16.png */,
 				989C0CC220A593A80027BC58 /* SNScanViewController */,
 				989C0C9620A592C40027BC58 /* Main.storyboard */,
 				989C0C9920A592C50027BC58 /* Assets.xcassets */,
@@ -317,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				989C0CCA20A594AF0027BC58 /* SNScanViewController.bundle in Resources */,
+				98283757210FEF7B00503AF7 /* 屏幕快照 2018-07-31 上午9.14.16.png in Resources */,
 				98053F20210C44CB0063D50D /* SNScanViewControllerImages.xcassets in Resources */,
 				989C0C9D20A592C50027BC58 /* LaunchScreen.storyboard in Resources */,
 				989C0C9A20A592C50027BC58 /* Assets.xcassets in Resources */,

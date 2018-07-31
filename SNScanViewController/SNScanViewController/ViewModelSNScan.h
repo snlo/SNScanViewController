@@ -47,8 +47,19 @@ typedef void(^SelectedCancelBlock)(void);
  */
 - (void)selectPictureFromAlbunPhotos:(void(^)(UIImagePickerController *imagePickerController))block;
 
+/**
+ 在相册中选中的图片
+
+ @param selectedBlock 回调一张图片
+ @param cancelBloc 返回的回调
+ */
 - (void)selectedBlock:(void(^)(UIImage *image))selectedBlock cancelBlock:(void(^)(void))cancelBloc;
 
-- (void)handel:(UIImage * )newImage;
+/**
+ 识别图中二维码（清晰的可以识别）
+
+ @param imageCode 图片源
+ */
+- (BOOL)scanImageQRCode:(UIImage *)imageCode;
 
 @end

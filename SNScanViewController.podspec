@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SNScanViewController"
-  s.version      = "0.0.5"
+  s.version      = "0.1.0"
   s.summary      = "Scanning view controller."
 
   # This description is used to generate tags and improve search results.
@@ -105,7 +105,8 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = 'SNScanViewController/SNScanViewController/SNScanViewController.bundle'
+  # s.resources = 'SNScanViewController/SNScanViewController/SNScanViewController.bundle'
+  s.resources = ['SNScanViewController/SNScanViewController/**/*.{xcassets,xib,md,storyboard,plist,bundle,json,html,svg,ttf,strings,js,css,scss,png,pdf,}']
   # s.resources = "Resources/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"

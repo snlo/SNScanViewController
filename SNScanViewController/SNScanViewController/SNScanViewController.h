@@ -27,12 +27,9 @@
  */
 - (void)scanedBlock:(void(^)(NSString * scanedValue))scanedBlock canceledBlock:(void(^)(void))canceledBlock;
 
+/**
+ 视图
+ */
 @property (nonatomic, strong) SNScanView * viewScan;
-
-
-
-
-
-
 
 @end

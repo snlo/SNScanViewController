@@ -196,7 +196,6 @@
         CGFloat width = SNSACN_SCREEN_WIDTH;
         CGFloat height = SNSACN_SCREEN_WIDTH * image.size.height / image.size.width;
         imageSimple = [self imageWithImageSimple:image scaledToSize:CGSizeMake(width, height)];
-        [self handel:imageSimple];
     }
     [self.imagePickerController dismissViewControllerAnimated:YES completion:nil];
     if (self.selectedImageBlock) {
@@ -222,29 +221,22 @@
     if (cancelBlock) self.selectedCancelBlock = cancelBlock;
 }
 
-- (void)handel:(UIImage * )newImage {
-//    CIDetector*detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:nil options:@{ CIDetectorAccuracy : CIDetectorAccuracyHigh}];
-//
-//    NSArray *features = [detector featuresInImage:[CIImage imageWithCGImage:newImage.CGImage]];
-//    if (features.count >=1) {
-//        CIQRCodeFeature *feature = [features objectAtIndex:0];
-//        NSString *scannedResult = feature.messageString;
-//        NSLog(@"%@",scannedResult);
-//    }
+- (BOOL)scanImageQRCode:(UIImage *)imageCode {
     
-    CIImage* ciImage = [CIImage imageWithCGImage:newImage.CGImage];
-    NSLog(@"image -- - %@",newImage);
-    //创建探测器
-    CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:nil options:@{CIDetectorAccuracy: CIDetectorAccuracyLow}];
-    NSArray *feature = [detector featuresInImage:ciImage];
-    
-    NSString *content = @"";
-    //取出探测到的数据
-    for (CIQRCodeFeature *result in feature) {
-        content = result.messageString;
-        NSLog(@" - -- -%@",content);
+    CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeQRCode
+                                              context:nil
+                                              options:@{CIDetectorAccuracy:CIDetectorAccuracyHigh}];
+    NSArray *features = [detector featuresInImage:[CIImage imageWithCGImage:imageCode.CGImage]];
+    if (features.count >= 1){
+        CIQRCodeFeature *feature = [features firstObject];
+        if (self.scanedBlock) {
+            [self playBeepPath:[NSString stringWithFormat:@"/System/Library/Audio/UISounds/%@.%@",@"new-mail",@"caf"]];
+            self.scanedBlock(feature.messageString);
+        }
+        return YES;
+    }else{
+        return NO;
     }
-
 }
 
 @end
