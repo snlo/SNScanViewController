@@ -84,13 +84,13 @@
     
     
     [self.buttonCancel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.viewBar.mas_leftMargin).offset(0);
+        make.left.equalTo(self.viewBar.mas_left).offset(16);
         make.bottom.equalTo(self.viewBar.mas_bottom).offset(0);
         make.width.offset(44);
         make.height.offset(44);
     }];
     [self.buttonAlbum mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.viewBar.mas_right).offset(-12);
+        make.right.equalTo(self.viewBar.mas_right).offset(-16);
         make.bottom.equalTo(self.viewBar.mas_bottom).offset(0);
         make.width.offset(44);
         make.height.offset(44);
