@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import <SNTool.h>
+#import <SNTool/SNTool.h>
 
 #define SNSACN_SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SNSACN_SCREEN_HIGHT [UIScreen mainScreen].bounds.size.height

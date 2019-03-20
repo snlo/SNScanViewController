@@ -23,7 +23,7 @@
 
 @property (nonatomic, strong) UIView * viewBar;
 
-@property (nonatomic, strong) UIView * viewScan; //
+@property (nonatomic, strong) UIView * viewScan;
 
 @property (nonatomic, strong) UIImageView * imageViewTopLine;
 
@@ -32,8 +32,6 @@
 @property (nonatomic, strong) UILabel * labelTitle;
 
 @property (nonatomic, strong) UILabel * labelPrompt;
-
-
 
 
 @property (nonatomic, assign) CFTimeInterval durationScan;
